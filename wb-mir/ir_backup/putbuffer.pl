@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 use 5.010;
-use strict;
 
 $ROM = $ARGV[0];
 $MODBUS_ADDRESS = $ARGV[1];
