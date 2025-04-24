@@ -5,7 +5,7 @@ $DIR = $ARGV[0];
 $MODBUS_ADDRESS = $ARGV[1];
 $BAUDRATE = $ARGV[2];
 $ROM_COUNT = $ARGV[3];
-$PORT = '/dev/ttyRS485-1' unless defined $ARGV[4];
+$PORT = $ARGV[4] // '/dev/ttyRS485-1';
 
 `mkdir $DIR`;
 

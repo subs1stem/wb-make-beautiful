@@ -12,7 +12,7 @@ foreach $i (2000, 2125, 2250, 2375) {
 $command2 = qq (echo `modbus_client --debug -mrtu -b9600 -pnone -s2 $PORT -a$MODBUS_ADDRESS -t0x03 -r2500 -c 9 | grep Data | sed -e 's/Data://' -e 's/s//g'`);
 $a.=`$command2`;
 
-$a = ~s/\n/ /g;
+$a =~ s/\n/ /g;
 @a = split(' ',$a);
 @dec = map hex, @a;
 $b = join (' ',@dec);
